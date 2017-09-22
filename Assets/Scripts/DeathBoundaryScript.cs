@@ -16,9 +16,9 @@ public class DeathBoundaryScript : MonoBehaviour {
 
     public void OnTriggerExit2D(Collider2D col)
     {
-        if (col.gameObject.tag == "Boundary")
+        if (col.gameObject.tag != "Player")
         {
-            Destroy(this.gameObject);
+            Destroy(col.gameObject);
         }
     }
 

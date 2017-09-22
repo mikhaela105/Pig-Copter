@@ -33,8 +33,6 @@ public class Alien : MonoBehaviour {
         Vector3 vectorToTarget = player.transform.position - transform.position;
         float angle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg;
 
-        Debug.Log(angle);
-
         if (angle < -100)
         {
             angle = -100;

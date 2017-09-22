@@ -5,11 +5,12 @@ using UnityEngine;
 public class SpawnerScript : MonoBehaviour {
 
 
-    public GameObject distanceText;
+    private GameObject console;
     public int distance;
     public float timer;
     private float TIMER;
 
+    public bool inGame;
     public float spawnTimeMin, spawnTimeMax;
     private float spawnTimer;
     public GameObject[] enemies;
@@ -25,8 +26,8 @@ public class SpawnerScript : MonoBehaviour {
         ALIEN=3
     }
 
-
 	void Start () {
+        console = GameObject.FindGameObjectWithTag("Console");
         TIMER = timer;
         spawnTimer = Random.RandomRange(spawnTimeMin, spawnTimeMax);
         prevPos = new Vector2(-10, -10);
@@ -34,45 +35,57 @@ public class SpawnerScript : MonoBehaviour {
 	
 	void Update () {
 
-        CalculateDistance();
-        spawnTimer -= Time.deltaTime;
+        inGame = console.GetComponent<Console>().inGame;
 
-        if (spawnTimer <= 0)
+        if (inGame)
         {
-            int enemyNo = 1;
-            enemySpawnChance = ComputeEnemieSpawnChance();
+            distance = console.GetComponent<Console>().distance;
+            spawnTimer -= Time.deltaTime;
 
-            if (distance > 500)
+            if (spawnTimer <= 0)
             {
-                if (Random.RandomRange(0,10) < 3)
-                {
-                    enemyNo = 2;
-                }
-            }
+                int enemyNo = 1;
+                enemySpawnChance = ComputeEnemieSpawnChance();
 
-            for (int i = 0; i < enemyNo; i++)
-            {
-                int randomEnemy = Random.RandomRange(0, 100);
-                int selectedEnemy = SelectEnemy(randomEnemy, enemySpawnChance);
-                Vector3 newPos = new Vector3();
-                Quaternion rotation = new Quaternion();
-
-                if (selectedEnemy == (int)e.BIRD || selectedEnemy == (int)e.EAGLE || 
-                    selectedEnemy == (int)e.ALIEN || selectedEnemy == (int)e.METEOR)
+                if (distance > 500)
                 {
-                    newPos.x = Random.RandomRange(-2.2f, 2.2f);
-                    newPos.y = Random.RandomRange(7,10);
-                    newPos.z = 0;
-                    rotation = Quaternion.Euler(0, 0, 0);
+                    if (Random.RandomRange(0, 10) < 3)
+                    {
+                        enemyNo = 2;
+                    }
                 }
 
-                //Checks if enemy is overlapping with previous enemy
-                newPos = ValidatePosition(prevPos, newPos);
+                for (int i = 0; i < enemyNo; i++)
+                {
+                    int randomEnemy = Random.RandomRange(0, 100);
+                    int selectedEnemy = SelectEnemy(randomEnemy, enemySpawnChance);
+                    Vector3 newPos = new Vector3();
+                    Quaternion rotation = new Quaternion();
 
-                //Instantiate the enemy and update timer, prevpos
-                Instantiate(enemies[selectedEnemy], newPos, rotation);
-                spawnTimer = Random.RandomRange(spawnTimeMin, spawnTimeMax);
-                prevPos = newPos;
+                    if (selectedEnemy == (int)e.BIRD || selectedEnemy == (int)e.EAGLE ||
+                        selectedEnemy == (int)e.ALIEN)
+                    {
+                        newPos.x = Random.RandomRange(-2.2f, 2.2f);
+                        newPos.y = Random.RandomRange(7, 10);
+                        newPos.z = 0;
+                        rotation = Quaternion.Euler(0, 0, 0);
+                    }
+                    if (selectedEnemy == (int)e.METEOR)
+                    {
+                        newPos.x = Random.RandomRange(-2.2f, 2.2f);
+                        newPos.y = Random.RandomRange(20, 40);
+                        newPos.z = 0;
+                        rotation = Quaternion.Euler(0, 0, 0);
+                    }
+
+                    //Checks if enemy is overlapping with previous enemy
+                    newPos = ValidatePosition(prevPos, newPos);
+
+                    //Instantiate the enemy and update timer, prevpos
+                    Instantiate(enemies[selectedEnemy], newPos, rotation);
+                    spawnTimer = Random.RandomRange(spawnTimeMin, spawnTimeMax);
+                    prevPos = newPos;
+                }
             }
         }
 	}
@@ -123,15 +136,4 @@ public class SpawnerScript : MonoBehaviour {
         return new int[] { 20, 50, 70, 100, 0, 0 };
     }
 
-    public void CalculateDistance()
-    {
-        if (timer > 0)
-            timer -= Time.deltaTime;
-        else
-        {
-            timer = TIMER;
-            distance += 10;
-            distanceText.GetComponent<TextMesh>().text = distance.ToString();
-        }
-    }
 }

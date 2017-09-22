@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2015
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pig-Copter.CSharp", "Pig-Copter.CSharp.csproj", "{A979BD34-EA44-CDA9-B4B1-89B7B2F44580}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pig-Copter.CSharp.Plugins", "Pig-Copter.CSharp.Plugins.csproj", "{ACB418FE-ECAA-9697-C80F-EFC3A54498BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pig-Copter.CSharp.Editor.Plugins", "Pig-Copter.CSharp.Editor.Plugins.csproj", "{B6CC817E-0907-BEA0-1558-DE2FB20EBFF8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +17,14 @@ Global
 		{A979BD34-EA44-CDA9-B4B1-89B7B2F44580}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A979BD34-EA44-CDA9-B4B1-89B7B2F44580}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A979BD34-EA44-CDA9-B4B1-89B7B2F44580}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACB418FE-ECAA-9697-C80F-EFC3A54498BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACB418FE-ECAA-9697-C80F-EFC3A54498BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACB418FE-ECAA-9697-C80F-EFC3A54498BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACB418FE-ECAA-9697-C80F-EFC3A54498BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6CC817E-0907-BEA0-1558-DE2FB20EBFF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6CC817E-0907-BEA0-1558-DE2FB20EBFF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6CC817E-0907-BEA0-1558-DE2FB20EBFF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6CC817E-0907-BEA0-1558-DE2FB20EBFF8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

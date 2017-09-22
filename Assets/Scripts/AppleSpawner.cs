@@ -6,6 +6,7 @@ public class AppleSpawner : MonoBehaviour {
 
     public GameObject[] spawners;
     public GameObject apple, coin;
+    private GameObject console;
     public float spawnApplesTimer;
     public float spawnTimeGap;
     private float SPAWNTIMEGAP;
@@ -24,70 +25,73 @@ public class AppleSpawner : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        SPAWNTIMEGAP = spawnTimeGap;	
+        SPAWNTIMEGAP = spawnTimeGap;
+        console = GameObject.FindGameObjectWithTag("Console");
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-        spawnApplesTimer -= Time.deltaTime;
-        if (spawnApplesTimer <= 0)
+        if (console.GetComponent<Console>().inGame)
         {
-            spawnApplesTimer = Random.RandomRange(8, 11);
-            spawnApples = true;
-        }
-
-        if (spawnApples)
-        {
-            int method = Random.RandomRange(0, 2);
-
-            switch (method)
+            spawnApplesTimer -= Time.deltaTime;
+            if (spawnApplesTimer <= 0)
             {
-                case 0:
-                    runZigZag = true;
-                    applesToSpawn = Random.RandomRange(5, 10);
-                    startAt = Random.RandomRange(0, 3);
-                    endAt = Random.RandomRange(startAt + 2, 5);
+                spawnApplesTimer = Random.RandomRange(8, 11);
+                spawnApples = true;
+            }
 
-                    if (Random.RandomRange(0, 2) == 0)
-                        spawner = startAt;
+            if (spawnApples)
+            {
+                int method = Random.RandomRange(0, 2);
+
+                switch (method)
+                {
+                    case 0:
+                        runZigZag = true;
+                        applesToSpawn = Random.RandomRange(5, 10);
+                        startAt = Random.RandomRange(0, 3);
+                        endAt = Random.RandomRange(startAt + 2, 5);
+
+                        if (Random.RandomRange(0, 2) == 0)
+                            spawner = startAt;
+                        else
+                            spawner = endAt;
+                        break;
+                    case 1:
+
+                        break;
+                    default:
+                        break;
+                }
+
+                spawnApples = false;
+            }
+
+            if (runZigZag && applesToSpawn > 0)
+            {
+                spawnTimeGap -= Time.deltaTime;
+                if (spawner > endAt - 1)
+                    countUp = false;
+                else if (spawner < startAt + 1)
+                    countUp = true;
+
+                if (spawnTimeGap <= 0)
+                {
+                    SpawnAppleAt(spawner);
+                    applesToSpawn -= 1;
+                    spawnTimeGap = SPAWNTIMEGAP;
+
+                    if (countUp)
+                        spawner++;
                     else
-                        spawner = endAt;
-                    break;
-                case 1:
-                    
-                    break;
-                default:
-                    break;
+                        spawner--;
+                }
+
+                if (applesToSpawn == 0)
+                    spawnApplesTimer = Random.RandomRange(3, 5);
             }
-
-            spawnApples = false;
         }
-
-        if (runZigZag && applesToSpawn > 0)
-        {
-            spawnTimeGap -= Time.deltaTime;
-            if (spawner > endAt-1)
-                countUp = false;
-            else if (spawner < startAt+1)
-                countUp = true;
-
-            if (spawnTimeGap<=0)
-            {
-                SpawnAppleAt(spawner);
-                applesToSpawn -= 1;
-                spawnTimeGap = SPAWNTIMEGAP;
-
-                if (countUp)
-                    spawner++;
-                else
-                    spawner--;
-            }
-
-            if (applesToSpawn == 0)
-                spawnApplesTimer = Random.RandomRange(3, 5);
-        }
-
 	}
 
     public void TestInvoke()
