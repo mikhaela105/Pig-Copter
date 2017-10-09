@@ -1,0 +1,480 @@
+fileFormatVersion: 2
+guid: 2c428014385bc824a853f5bc3576cbfb
+timeCreated: 1507532161
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: piggo_Cut_Final_0
+    21300002: piggo_Cut_Final_3
+    21300004: piggo_Cut_Final_4
+    21300006: piggo_Cut_Final_5
+    21300008: piggo_Cut_Final_6
+    21300010: piggo_Cut_Final_7
+    21300012: piggo_Cut_Final_8
+    21300014: piggo_Cut_Final_9
+    21300016: piggo_Cut_Final_10
+    21300018: piggo_Cut_Final_11
+    21300020: piggo_Cut_Final_12
+    21300022: body
+    21300024: piggo_Cut_Final_14
+    21300026: piggo_Cut_Final_15
+    21300028: lh
+    21300030: piggo_Cut_Final_17
+    21300032: piggo_Cut_Final_18
+    21300034: piggo_Cut_Final_19
+    21300036: piggo_Cut_Final_20
+    21300038: piggo_Cut_Final_21
+    21300040: rh
+    21300042: piggo_Cut_Final_23
+    21300044: piggo_Cut_Final_24
+    21300046: piggo_Cut_Final_25
+    21300048: feet
+    21300050: piggo_Cut_Final_28
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 1000
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: piggo_Cut_Final_0
+      rect:
+        serializedVersion: 2
+        x: 1777
+        y: 2531
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: piggo_Cut_Final_3
+      rect:
+        serializedVersion: 2
+        x: 2682
+        y: 2397
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: piggo_Cut_Final_4
+      rect:
+        serializedVersion: 2
+        x: 2621
+        y: 2393
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: piggo_Cut_Final_5
+      rect:
+        serializedVersion: 2
+        x: 2701
+        y: 2375
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: piggo_Cut_Final_6
+      rect:
+        serializedVersion: 2
+        x: 2239
+        y: 2252
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: piggo_Cut_Final_7
+      rect:
+        serializedVersion: 2
+        x: 2226
+        y: 2233
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: piggo_Cut_Final_8
+      rect:
+        serializedVersion: 2
+        x: 2230
+        y: 2153
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: piggo_Cut_Final_9
+      rect:
+        serializedVersion: 2
+        x: 1796
+        y: 1976
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: piggo_Cut_Final_10
+      rect:
+        serializedVersion: 2
+        x: 1619
+        y: 1965
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: piggo_Cut_Final_11
+      rect:
+        serializedVersion: 2
+        x: 1772
+        y: 1956
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: piggo_Cut_Final_12
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 1821
+        width: 13
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: body
+      rect:
+        serializedVersion: 2
+        x: 1249
+        y: 1101
+        width: 874
+        height: 843
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: piggo_Cut_Final_14
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 1793
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: piggo_Cut_Final_15
+      rect:
+        serializedVersion: 2
+        x: 1089
+        y: 1790
+        width: 18
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lh
+      rect:
+        serializedVersion: 2
+        x: 947
+        y: 1544
+        width: 218
+        height: 253
+      alignment: 9
+      pivot: {x: 0.73333627, y: 0.3492084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: piggo_Cut_Final_17
+      rect:
+        serializedVersion: 2
+        x: 2571
+        y: 1747
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: piggo_Cut_Final_18
+      rect:
+        serializedVersion: 2
+        x: 2129
+        y: 1741
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: piggo_Cut_Final_19
+      rect:
+        serializedVersion: 2
+        x: 2548
+        y: 1732
+        width: 9
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: piggo_Cut_Final_20
+      rect:
+        serializedVersion: 2
+        x: 2590
+        y: 1730
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: piggo_Cut_Final_21
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 1576
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rh
+      rect:
+        serializedVersion: 2
+        x: 2467
+        y: 1477
+        width: 233
+        height: 259
+      alignment: 9
+      pivot: {x: 0.21619123, y: 0.42144093}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: piggo_Cut_Final_23
+      rect:
+        serializedVersion: 2
+        x: 2652
+        y: 1533
+        width: 13
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: piggo_Cut_Final_24
+      rect:
+        serializedVersion: 2
+        x: 2574
+        y: 1496
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: piggo_Cut_Final_25
+      rect:
+        serializedVersion: 2
+        x: 2645
+        y: 1479
+        width: 13
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: feet
+      rect:
+        serializedVersion: 2
+        x: 1349
+        y: 875
+        width: 822
+        height: 203
+      alignment: 9
+      pivot: {x: 0.51983494, y: 0.90158546}
+      border: {x: 0, y: 48, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: piggo_Cut_Final_28
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 867
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FallingScript : MonoBehaviour {
+public class FallingScript2 : MonoBehaviour {
 
     public float fallSpeed;
 
