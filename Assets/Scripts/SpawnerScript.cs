@@ -5,16 +5,16 @@ using UnityEngine;
 public class SpawnerScript : MonoBehaviour {
 
 
-    private GameObject console;
     public int distance;
     public float timer;
-    private float TIMER;
-
     public bool inGame;
     public float spawnTimeMin, spawnTimeMax;
-    private float spawnTimer;
     public GameObject[] enemies;
+
     private int[] enemySpawnChance;
+    private float spawnTimer;
+    private float TIMER;
+    private GameObject console;
 
     Vector2 prevPos;
 
@@ -100,7 +100,6 @@ public class SpawnerScript : MonoBehaviour {
         }
         if (alterPos)
         {
-            Debug.Log("OVERLAPPING");
             if (prevPos.x <= 0)
             {
                 newPos.x = Random.RandomRange(prevPos.x + 1.5f, 2.2f);

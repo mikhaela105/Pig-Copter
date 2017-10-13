@@ -5,27 +5,30 @@ using UnityEngine;
 public class AppleSpawner : MonoBehaviour {
 
     public GameObject[] spawners;
-    public GameObject apple, coin;
+    public GameObject apple, coin, boost;
     private GameObject console;
-    public float spawnApplesTimer;
-    public float spawnTimeGap;
-    private float SPAWNTIMEGAP;
+    public float coinSpawnTimer;
+    public float coinSpawnGap, appleTimeMin, appleTimeMax;
+    public float boostTimeMin, boostTimeMax;
+    private float COINSPAWNGAP, appleSpawnTime, boostSpawnTime;
 
-    public bool spawnApples = false;
+    public bool spawnCoins = false;
     public bool runZigZag = false;
     public bool running = false;
 
     public int spawner = 0;
     int counter = 0;
     public int appleCount = 0;
-    public int applesToSpawn = 0;
+    public int coinsToSpawn = 0;
 
     bool countUp = true;
     public int startAt, endAt;
 
 	// Use this for initialization
 	void Start () {
-        SPAWNTIMEGAP = spawnTimeGap;
+        COINSPAWNGAP = coinSpawnGap;
+        appleSpawnTime = Random.RandomRange(appleTimeMin, appleTimeMax);
+        boostSpawnTime = Random.RandomRange(boostTimeMin, boostTimeMax);
         console = GameObject.FindGameObjectWithTag("Console");
 	}
 	
@@ -34,14 +37,29 @@ public class AppleSpawner : MonoBehaviour {
 
         if (console.GetComponent<Console>().inGame)
         {
-            spawnApplesTimer -= Time.deltaTime;
-            if (spawnApplesTimer <= 0)
+            coinSpawnTimer -= Time.deltaTime;
+            appleSpawnTime -= Time.deltaTime;
+            boostSpawnTime -= Time.deltaTime;
+
+            if (boostSpawnTime <= 0)
             {
-                spawnApplesTimer = Random.RandomRange(8, 11);
-                spawnApples = true;
+                SpawnCollectible(boost);
+                boostSpawnTime = Random.RandomRange(boostTimeMin, boostTimeMax);
             }
 
-            if (spawnApples)
+            if (appleSpawnTime <= 0)
+            {
+                SpawnCollectible(apple);
+                appleSpawnTime = Random.RandomRange(appleTimeMin, appleTimeMax);
+            }
+
+            if (coinSpawnTimer <= 0)
+            {
+                coinSpawnTimer = Random.RandomRange(4, 7);
+                spawnCoins = true;
+            }
+
+            if (spawnCoins)
             {
                 int method = Random.RandomRange(0, 2);
 
@@ -49,7 +67,7 @@ public class AppleSpawner : MonoBehaviour {
                 {
                     case 0:
                         runZigZag = true;
-                        applesToSpawn = Random.RandomRange(5, 10);
+                        coinsToSpawn = Random.RandomRange(5, 10);
                         startAt = Random.RandomRange(0, 3);
                         endAt = Random.RandomRange(startAt + 2, 5);
 
@@ -65,22 +83,22 @@ public class AppleSpawner : MonoBehaviour {
                         break;
                 }
 
-                spawnApples = false;
+                spawnCoins = false;
             }
 
-            if (runZigZag && applesToSpawn > 0)
+            if (runZigZag && coinsToSpawn > 0)
             {
-                spawnTimeGap -= Time.deltaTime;
+                coinSpawnGap -= Time.deltaTime;
                 if (spawner > endAt - 1)
                     countUp = false;
                 else if (spawner < startAt + 1)
                     countUp = true;
 
-                if (spawnTimeGap <= 0)
+                if (coinSpawnGap <= 0)
                 {
-                    SpawnAppleAt(spawner);
-                    applesToSpawn -= 1;
-                    spawnTimeGap = SPAWNTIMEGAP;
+                    SpawnCoinAt(spawner);
+                    coinsToSpawn -= 1;
+                    coinSpawnGap = COINSPAWNGAP;
 
                     if (countUp)
                         spawner++;
@@ -88,31 +106,24 @@ public class AppleSpawner : MonoBehaviour {
                         spawner--;
                 }
 
-                if (applesToSpawn == 0)
-                    spawnApplesTimer = Random.RandomRange(3, 5);
+                if (coinsToSpawn == 0)
+                    coinSpawnTimer = Random.RandomRange(3, 5);
             }
         }
 	}
 
-    public void TestInvoke()
+    public void SpawnCollectible(GameObject item)
     {
-        Debug.Log(counter);
-        counter++;
+        Vector2 pos;
+        pos.y = this.transform.position.y;
+        pos.x = Random.RandomRange(-2.5f, 2.5f);
+
+        Instantiate(item, pos, this.transform.rotation);
     }
 
-    public void ZigZag(int repeatTimes)
+    public void SpawnCoinAt(int spawner)
     {
-
-    }
-
-    public void StraightLine(int appleSpawner)
-    {
-
-    }
-
-    public void SpawnAppleAt(int spawner)
-    {
-        Instantiate(apple, spawners[spawner].transform.position, this.transform.rotation);
+        Instantiate(coin, spawners[spawner].transform.position, this.transform.rotation);
     }
 
 

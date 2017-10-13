@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerScript : MonoBehaviour {
 
-    public GameObject console;
+    public GameObject console, energyIndicator;
     private Vector2 startPos;
     public Slider energySlider;
     public float energy, energyLossRate;
@@ -21,15 +21,30 @@ public class PlayerScript : MonoBehaviour {
 
         if (console.GetComponent<Console>().inGame)
         {
-            //energy -= energyLossRate;
+            energy -= energyLossRate;
             energySlider.value = energy;
             if (energy <= 0)
             {
                 this.GetComponent<Rigidbody2D>().gravityScale = 1;
                 console.GetComponent<Console>().GameOver();
             }
+            if (energy <= 30)
+            {
+                energyIndicator.GetComponent<Image>().enabled = true;
+            }
+            else
+            {
+                energyIndicator.GetComponent<Image>().enabled = false;
+            }
         }
 	}
+
+    public void EatApple()
+    {
+        energy += 25;
+        if (energy > 100)
+            energy = 100;
+    }
 
     public void Reset()
     {

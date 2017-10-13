@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -28,10 +29,16 @@ public class PlayerMovement : MonoBehaviour
         if (console.GetComponent<Console>().inGame)
         {
             //Key Down
-            if (Input.GetKeyDown(KeyCode.D))
+            if (CrossPlatformInputManager.GetAxis("Horizontal") >= 0)
+            {
                 right = true;
-            if (Input.GetKeyDown(KeyCode.A))
+                left = false;
+            }
+            if (CrossPlatformInputManager.GetAxis("Horizontal") < 0)
+            {
                 left = true;
+                right = false;
+            }
             if (Input.GetKeyDown(KeyCode.W))
                 boost = true;
 
@@ -44,27 +51,27 @@ public class PlayerMovement : MonoBehaviour
                 boost = false;
 
             //ROTATION
-            if (right)
-            {
-                rotZ -= rotSpeed;
-                if (this.transform.localScale.x > 0)
-                    this.transform.localScale = new Vector3(-this.transform.localScale.x, this.transform.localScale.y, this.transform.localScale.z);
-                if (rotZ < -60)
-                    rotZ = -60;
+            //if (right)
+            //{
+            //    rotZ -= rotSpeed;
+            //    if (this.transform.localScale.x > 0)
+            //        this.transform.localScale = new Vector3(-this.transform.localScale.x, this.transform.localScale.y, this.transform.localScale.z);
+            //    if (rotZ < -60)
+            //        rotZ = -60;
 
-            }
-            if (left)
-            {
-                rotZ += rotSpeed;
-                if (this.transform.localScale.x < 0)
-                    this.transform.localScale = new Vector3(-this.transform.localScale.x, this.transform.localScale.y, this.transform.localScale.z);
-                if (rotZ > 60)
-                    rotZ = 60;
+            //}
+            //if (left)
+            //{
+            //    rotZ += rotSpeed;
+            //    if (this.transform.localScale.x < 0)
+            //        this.transform.localScale = new Vector3(-this.transform.localScale.x, this.transform.localScale.y, this.transform.localScale.z);
+            //    if (rotZ > 60)
+            //        rotZ = 60;
 
 
 
-            }
-            this.transform.rotation = Quaternion.Euler(0, 0, rotZ);
+            //}
+            this.transform.rotation = Quaternion.Euler(0, 0, CrossPlatformInputManager.GetAxis("Horizontal")*-45);
 
             //FLYYY
             float speed = flySpeed;
