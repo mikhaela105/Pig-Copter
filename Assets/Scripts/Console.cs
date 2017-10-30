@@ -16,7 +16,7 @@ public class Console : MonoBehaviour {
     public int distance, distanceIncSpeed, gold, highscore;
     public float boostTimer;
     public bool show, hide;
-    public bool inGame, boostGame;
+    public bool inGame, boostGame, volume;
 
 	// Use this for initialization
 	void Start () {
@@ -26,6 +26,7 @@ public class Console : MonoBehaviour {
 
         Social.localUser.Authenticate(success => { });
 
+        volume = true;
         LoadGame();
     }
 	
@@ -59,6 +60,19 @@ public class Console : MonoBehaviour {
         if (CrossPlatformInputManager.GetButtonUp("InfoBack"))
         {
             ChangeView(0);
+        }
+        if (CrossPlatformInputManager.GetButtonUp("Setting"))
+        {
+            if (volume)
+            {
+                AudioListener.volume = 0;
+                volume = false;
+            }
+            else
+            {
+                AudioListener.volume = 1;
+                volume = true;
+            }
         }
 
         if (inGame)
