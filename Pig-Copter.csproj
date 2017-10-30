@@ -291,6 +291,8 @@
     <Compile Include="Assets\Scripts\AspectRatio.cs" />
     <Compile Include="Assets\Scripts\BackgroundScript.cs" />
     <Compile Include="Assets\Scripts\BoostScript.cs" />
+    <Compile Include="Assets\Scripts\CloudScript.cs" />
+    <Compile Include="Assets\Scripts\CloudSpawner.cs" />
     <Compile Include="Assets\Scripts\CoinScript.cs" />
     <Compile Include="Assets\Scripts\CollectibleSpawner.cs" />
     <Compile Include="Assets\Scripts\CollectSpawnController.cs" />
@@ -308,13 +310,15 @@
     <Compile Include="Assets\Scripts\PlayerGameScript.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerScript.cs" />
+    <Compile Include="Assets\Scripts\RotorBlades.cs" />
     <Compile Include="Assets\Scripts\SingleAppleSpawner.cs" />
     <Compile Include="Assets\Scripts\SpawnerScript.cs" />
+    <Compile Include="Assets\Scripts\StarScript.cs" />
+    <Compile Include="Assets\Scripts\StarSpawner.cs" />
     <Compile Include="Assets\Scripts\StoreController.cs" />
     <Compile Include="Assets\Scripts\Tests\TiltTest.cs" />
     <Compile Include="Assets\Scripts\UIFadeScript.cs" />
     <Compile Include="Assets\ScrollPanel.cs" />
-    <Compile Include="Assets\Sprites\NewBehaviourScript.cs" />
     <Compile Include="Assets\Testing.cs" />
   </ItemGroup>
   <ItemGroup>

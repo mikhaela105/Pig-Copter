@@ -1,4 +1,5 @@
 Android
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.CloudScript
 dc07d7ad69b399a46e92c483bf1c04ca UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsTracker
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 9f07aaefd0255462bb6e4f9e5da6b2d4 UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
@@ -12,7 +13,10 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 7b848b7feaa524953d09fc1851efa6da UnityEngine.Timeline.dll:UnityEngine.Timeline.GroupTrack
 7b848b7feaa524953d09fc1851efa6da UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 c24a21b131bfa67be1162db2cba4b52b UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
+a6bc916a1cc435f23e99c7a6cba9ed23 Assembly-CSharp.dll:.RotorBlades
+ad1ce9e7e34564722b05ca58991a6d57 Assembly-CSharp.dll:.StarSpawner
 9d7b83f0ec7763230fed1df48e01dbfd Assembly-CSharp.dll:.BackgroundScript
+3a22c2c2f567152ad78ba5b5d8736d2b Assembly-CSharp.dll:.CollectibleSpawner
 e78fe199ccd1ae42551cdc622711ebf7 Assembly-CSharp.dll:.PlayerMovement
 a35dc9cca2faebc5f5f1aeb9e8e47bbe UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
@@ -95,7 +99,6 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 7b848b7feaa524953d09fc1851efa6da UnityEngine.Timeline.dll:UnityEngine.Timeline.GroupTrack
 7b848b7feaa524953d09fc1851efa6da UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 c24a21b131bfa67be1162db2cba4b52b UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.NewBehaviourScript
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
 60b2bb652410a5867a5ab9a01cd38461 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkDiscovery
@@ -132,6 +135,7 @@ d080f8c63f61957c3e4fc6186b3a4ada Assembly-CSharp.dll:.SingleAppleSpawner
 dda505d231070f3e55b51eba18165bb5 Assembly-CSharp.dll:.Alien
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp-firstpass.dll:UnityStandardAssets.CrossPlatformInput.MobileControlRig
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.PlayGameScript
+c4190cbb9979c7c84024b953e23e4957 Assembly-CSharp.dll:.AspectRatio
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
 60b2bb652410a5867a5ab9a01cd38461 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkDiscovery
@@ -146,6 +150,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 3f32f08a64daf40b09ed864d96fe3840 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransform
 73843688b51256aed059f049c540bca8 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 528ea1fd7c01796fc60c4e2f172ea229 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Testing
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.PlayModeRunnerCallback
 5f2ad81aa8994e8fbe25d1e57afe6773 UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.PlaymodeTestsController
 64eb32cc721b1cc68a91ed57461e188c UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.RemoteTestResultSender
@@ -160,12 +165,13 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.VR.WSA.Spa
 0e5cf57eea89df35ed9186ae813ce0b8 Assembly-CSharp.dll:.ItemScript
 280c514c927f38ce3979832669479096 Assembly-CSharp.dll:.MouseClickScript
 81d3fa35f3270744d8c271fbb7597c65 Assembly-CSharp.dll:.DeathScript
+4da0772efe1cc5b8114a4c625993df5c Assembly-CSharp.dll:.CloudSpawner
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.AppleScript
 a8796ecdc9d5c260bbe32f30c4b10708 Assembly-CSharp-firstpass.dll:UnityStandardAssets.CrossPlatformInput.TouchPad
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.StarScript
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:GooglePlayGames.OurUtils.PlayGamesHelperObject
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.CoinScript
 7a303a74bbd4777f93ac0d40fc1f0343 Assembly-CSharp.dll:.MeteorScript
 e5c78d98b8da52e2f0807ad3da29b343 Assembly-CSharp.dll:.ScrollPanel
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.FixedRotation
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.BoostScript
-c4190cbb9979c7c84024b953e23e4957 Assembly-CSharp.dll:.AspectRatio

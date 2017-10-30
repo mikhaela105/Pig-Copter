@@ -28,17 +28,20 @@ public class EagleScript : MonoBehaviour {
 		
         if (!isReady)
         {
-            if (parent.transform.position.y > waitAtPoint.y)
+            if (parent.gameObject != null)
             {
-                this.transform.Translate(Vector2.down * fallSpeed * Time.deltaTime);
-            }
-            else
-            {
-                readyTimer -= Time.deltaTime;
-                if (readyTimer <= 0)
+                if (parent.transform.position.y > waitAtPoint.y)
                 {
-                    RotateToPlayer();
-                    isReady = true;
+                    this.transform.Translate(Vector2.down * fallSpeed * Time.deltaTime);
+                }
+                else
+                {
+                    readyTimer -= Time.deltaTime;
+                    if (readyTimer <= 0)
+                    {
+                        RotateToPlayer();
+                        isReady = true;
+                    }
                 }
             }
         }

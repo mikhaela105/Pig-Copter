@@ -125,11 +125,11 @@ public class SpawnerScript : MonoBehaviour {
 
     public int[] ComputeEnemieSpawnChance()
     {
-        if (distance < 500)
+        if (distance < 750)
             return new int[] { 10, 100, 0, 0, 0, 0 };
-        else if (distance < 1000)
-            return new int[] { 20, 70, 100, 0, 0, 0 };
         else if (distance < 1500)
+            return new int[] { 20, 70, 100, 0, 0, 0 };
+        else if (distance < 2200)
             return new int[] { 20, 50, 70, 100, 0, 0 };
 
         return new int[] { 20, 50, 70, 100, 0, 0 };

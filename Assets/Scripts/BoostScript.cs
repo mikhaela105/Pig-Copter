@@ -21,6 +21,7 @@ public class BoostScript : MonoBehaviour {
         if (col.gameObject.tag == "Player")
         {
             console.GetComponent<Console>().boost_game();
+            Destroy(this.gameObject);
         }
     }
 }
